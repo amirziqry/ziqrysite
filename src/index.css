@@ -1,0 +1,133 @@
+/* ───────────────────────────────
+   Global Styles (index.css)
+─────────────────────────────── */
+
+/* Font setup */
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AveriaSerifLight';
+  src: url('/fonts/AveriaSerifLightItalic.ttf') format('truetype');
+}
+
+/* Color + Typography Variables */
+:root {
+  --bg: #061701;
+  --accent: #27449a;
+  --text: #ffffff;
+  --link-hover: #d3986e;
+  --font-primary: 'AlteHaasGrotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-secondary: 'AveriaSerifLight', serif;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-primary);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Containers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--link-hover);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2719a8;
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero-bio {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* new */
+.kasahara-logo {
+  width: 280px;         /* target width */
+  height: 64px;        /* target height */
+  padding: 0;          /* remove extra space from .logo padding */
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;      /* prevent flex containers from stretching it */
+}
